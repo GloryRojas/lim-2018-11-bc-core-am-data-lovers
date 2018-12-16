@@ -1,0 +1,67 @@
+/*
+font-family: 'ZCOOL XiaoWei', serif;
+font-family: 'Noto Serif SC', serif;
+font-family: 'Noto Serif TC', serif;
+font-family: 'Quicksand', sans-serif;*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #30CCCB;
+  font-family: 'Noto Serif SC', serif;
+}
+.wrap{
+  max-width: 1100px;
+  width: 90%;
+  margin: auto;
+}
+.store-pokemon{
+  display: flex;
+}
+.mostpower_list{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  padding: 2px;
+  width: 18%;
+}
+.mostpower_list .category-pokemon{
+  display: block;
+  width: 90%;
+  padding: 17px 0;
+  margin-bottom: 17px;
+  background: #C5F8F7;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #400419;
+}
+/* cajitas pokemon */
+.pokemon-box-card{
+  width: 82%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card-link{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.blog-card{
+  width: 100%;
+  background: #E392AF;
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 1;
+
+}
+.post-image .article-details{
+  display: inline;
+}
