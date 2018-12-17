@@ -16,7 +16,7 @@
       <input type="checkbox" id="btn-menu">
       <label for="btn-menu"><img src="img/lista.png"></label>
       <nav class="menu">
-        <ul>
+        <ul id="contenedor-item">
           <li><a href="#">INICIO</a></li>
           <li><a href="#">FILTRAR</a></li>
           <li><a href="#">ORDENAR</a></li>
@@ -26,10 +26,28 @@
     </div>
     <div class="wrap">
       <div class="store-pokemon">
-        <div class="mostpower_list">
-          <button type="button" id= "all-pokemon" class="category-pokemon">TODOS</button>
-          <button type="button" id="most-evolution" class="category-pokemon">MAYOR EVOLUCION</button>
-        </div>
+        <aside class="mostpower_list">
+          <ul>
+            <li><a href="#" id="most-evolution" class="category-pokemon" value="bcd">MAYOR EVOLUCION</a></li>
+          </ul>
+          <ul id="cont-tipos">
+            <li><a href="#" class="category-pokemon" value="Normal">NORMAL</a></li>
+            <li><a href="#" class="category-pokemon" value="Fire">FUEGO</a></li>
+            <li><a href="#" class="category-pokemon" value="Water">AGUA</a></li>
+            <li><a href="#" class="category-pokemon" value="Electric">ELECTRICO</a></li>
+            <li><a href="#" class="category-pokemon" value="Grass">PLANTA</a></li>
+            <li><a href="#" class="category-pokemon" value="Ice">HIELO</a></li>
+            <li><a href="#" class="category-pokemon" value="Fighting">LUCHA</a></li>
+            <li><a href="#" class="category-pokemon" value="Poison">VENENO</a></li>
+            <li><a href="#" class="category-pokemon" value="Ground">TIERRA</a></li>
+            <li><a href="#" class="category-pokemon" value="Flying">VOLADOR</a></li>
+            <li><a href="#" class="category-pokemon" value="Psychic">PSIQUICO</a></li>
+            <li><a href="#" class="category-pokemon" value="Bug">BICHO</a></li>
+            <li><a href="#" class="category-pokemon" value="Rock">ROCA</a></li>
+            <li><a href="#" class="category-pokemon" value="Ghost">FANTASMA</a></li>
+            <li><a href="#" class="category-pokemon" value="Dragon">DRAGON</a></li>
+          </ul>
+        </aside>
         <section class = "pokemon-box-card">
             <div id="container-list" class="card-link">
             </div>

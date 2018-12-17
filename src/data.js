@@ -38,6 +38,18 @@ const crearTemplateDeCard = (data) => {
 
 
 //Obteniendo objetos con pokemons mas evolucionados
+
 const mostEvolutionPokemon = dataPokemon.filter(evolucion => (evolucion.candy_count === undefined));
 
-//Ordenando pokemones segun peso
+//Filtrando pokemones según tipo
+const filterData = (data, condition)=>{
+  let arrType = [];
+  for (var i = 0; i < data.length; i++) {
+    for (var j = 0; j < data[i].type.length; j++) {
+      if(data [i].type[j] == condition){
+        arrType.push(data[i])
+      }
+    }
+  }
+  return arrType;
+};
