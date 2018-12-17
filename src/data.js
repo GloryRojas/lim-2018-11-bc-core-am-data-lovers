@@ -1,9 +1,3 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-/*const example = () => {
-  return 'example';
-};
-window.example = example;*/
 //Construyendo función para copiar la data
 const arrpokemon = POKEMON.pokemon;
 const datacopy = (arr) => {
@@ -19,11 +13,7 @@ const datacopy = (arr) => {
 //Array copia de la data original ---> Aqui iniciamos la funcionalidad.
 const dataPokemon = datacopy(arrpokemon);
 
-//Obteniendo objetos con pokemons mas evolucionados
-const mostEvolutionPokemon = dataPokemon.filter(evolucion => (evolucion.candy_count === undefined));
-console.log(mostEvolutionPokemon);
-//pintando resultados de filtrar mas evolucionados.
-const containerList = document.getElementById('container-list');
+//Funcion para pintar tarjetas con datos pokemon
 const crearTemplateDeCard = (data) => {
   let templateListOfCards = '';
   // recorremos nuestro array con forEach
@@ -41,10 +31,13 @@ const crearTemplateDeCard = (data) => {
         </article>
       </div>
     `;
-    // vamos concatenando cada li
     templateListOfCards += card;
   })
-  containerList.innerHTML = templateListOfCards;
-}
-// ejecuntado funciona para pintar la data en mi html
-crearTemplateDeCard(mostEvolutionPokemon);
+  return templateListOfCards
+};
+
+
+//Obteniendo objetos con pokemons mas evolucionados
+const mostEvolutionPokemon = dataPokemon.filter(evolucion => (evolucion.candy_count === undefined));
+
+//Ordenando pokemones segun peso

@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Serif+TC:400,600,700|Quicksand:400,500|ZCOOL+XiaoWei" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1>"POKEDEX PRIME"</h1>
+      <img src="img/pokeball.png" class="img-header">
+      <img src="img/Pokemonlogo.png" class="img-header-center">
+      <img src="img/Ash.png" class="img-header">
     </header>
+    <div class="menu-horizontal">
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu"><img src="img/lista.png"></label>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">FILTRAR</a></li>
+          <li><a href="#">ORDENAR</a></li>
+          <li><a href="#">POKECIENTIFICO</a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="wrap">
       <div class="store-pokemon">
         <div class="mostpower_list">
-          <a href="#" class="category-pokemon">TODOS</a>
-          <a href="#" class="category-pokemon">MAYOR EVOLUCION</a>
+          <button type="button" id= "all-pokemon" class="category-pokemon">TODOS</button>
+          <button type="button" id="most-evolution" class="category-pokemon">MAYOR EVOLUCION</button>
         </div>
         <section class = "pokemon-box-card">
             <div id="container-list" class="card-link">
@@ -23,9 +36,9 @@
         </section>
       </div>
     </div>
-
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
+<link href="<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Serif+TC:400,600,700|Quicksand:400,500|ZCOOL+XiaoWei" rel="stylesheet"/>
