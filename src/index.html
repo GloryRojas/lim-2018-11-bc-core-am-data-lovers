@@ -1,18 +1,128 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <script src="data.js"></script>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tutoriales a tu alcance">
+    <meta name="description" content="aprendiando paginas web">
+    <meta name="keywords" content="tutoriales, html, desarrolo web">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diseño Web responsivos</title>
+    <link rel="sicon" href="img/user.png">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--========================================
+            SECTION 1
+        ===========================================-->
+        <header class="row">
+
+            <div id="logo" class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                POKEMON
+            </div>
+
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-0"></div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <center id="icon1">
+                        <p>t</p>
+                    </center>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <center id="icon2">
+                        <p>w</p>
+                    </center>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <center id="icon3">
+                        <p>f</p>
+                    </center>
+                </div>
+            </div>
+        </header>
+        <!--=======================================
+            SECTION 2
+        ===========================================-->
+        <nav class="row">
+            <ul>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#">boton 1</a></li>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#">boton 2</a></li>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#">boton 3</a></li>
+                <!--<li class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><a href="#">boton 4</li></a>
+                    <li class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><a href="#">boton 5</li></a>-->
+            </ul>
+        </nav>
+        <!--========================================
+            SECTION 3
+        ===========================================-->
+        <section id="section3" class="row">
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <center>
+                    <h1>Agua</h1>
+                    <img id="sec3Img1" width="100" onclick="btnPokemonWater()">
+                    <h2 id="sec3Tit1">Lorem Ipsum</h2>
+                    
+                </center>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <center>
+                    <h1>Tierra</h1>
+                    <img id="sec3Img2" width="100" onclick="btnPokemonGround()">
+                    <h2 id="sec3Tit2">Lorem Ipsum</h2>  
+                </center>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <center>
+                    <h1>Aire</h1>
+                    <img id="sec3Img3" width="100" onclick="btnPokemonFlying()">
+                    <h2 id="sec3Tit3">Lorem Ipsum</h2>
+                    
+                </center>
+            </div>
+        </section>
+        <!--========================================
+            SECTION 4
+        ===========================================-->
+        <section id="section4" class="row">
+            <aside id="left" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <ul>
+                    <li><i class="icon-cheveron-right"><a href="#">link 1</a></i></li>
+                    <li><i class="icon-cheveron-right"><a href="#">link 2</a></i></li>
+                    <li><i class="icon-cheveron-right"><a href="#">link 3</a></i></li>
+                    <li><i class="icon-cheveron-right"><a href="#">link 4</a></i></li>
+                </ul>
+            </aside>
+            <article class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                <h1 id="contTypePok"></h1>
+
+                <div class="row" id="contPokemones">
+
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                        <img src=*|img|* width="100%">
+                        <span> *|name|* </span>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+        <!--========================================
+            SECTION 5
+        ===========================================-->
+        <footer class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">&copy; Todos los derechos reservados</div>
+        </footer>
+    </div>
+
+    <script src="data/pokemon/pokemon.js"></script>
+
     <script src="main.js"></script>
-  </body>
+</body>
+
 </html>

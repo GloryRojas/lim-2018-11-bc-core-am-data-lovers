@@ -1,11 +1,13 @@
 {
-  "pokemon": [{
+  "pokemon": [
+    {
     "id": 1,
     "num": "001",
     "name": "Bulbasaur",
     "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
     "type": [
       "Grass",
+      
       "Poison"
     ],
     "height": "0.71 m",
@@ -30,7 +32,9 @@
       "num": "003",
       "name": "Venusaur"
     }]
-  }, {
+  }, 
+
+  {
     "id": 2,
     "num": "002",
     "name": "Ivysaur",
@@ -65,7 +69,9 @@
       "num": "003",
       "name": "Venusaur"
     }]
-  }, {
+  }, 
+
+  {
     "id": 3,
     "num": "003",
     "name": "Venusaur",
@@ -95,7 +101,9 @@
       "num": "002",
       "name": "Ivysaur"
     }]
-  }, {
+  }, 
+  
+  {
     "id": 4,
     "num": "004",
     "name": "Charmander",
@@ -124,7 +132,9 @@
       "num": "006",
       "name": "Charizard"
     }]
-  }, {
+  }, 
+  
+  {
     "id": 5,
     "num": "005",
     "name": "Charmeleon",
@@ -154,7 +164,9 @@
       "num": "006",
       "name": "Charizard"
     }]
-  }, {
+  }, 
+  
+  {
     "id": 6,
     "num": "006",
     "name": "Charizard",
