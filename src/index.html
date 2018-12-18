@@ -17,15 +17,18 @@
       <label for="btn-menu"><img src="img/lista.png"></label>
       <nav class="menu">
         <ul id="contenedor-item">
-          <li><a href="#">INICIO</a></li>
-          <li><a href="#">FILTRAR</a></li>
-          <li><a href="#">ORDENAR</a></li>
-          <li><a href="#">POKECIENTIFICO</a></li>
+          <li><a href="#" id="btn-inicio">INICIO</a></li>
+          <li><a href="#" id="btn-filtrar">FILTRAR</a></li>
+          <li><a href="#" id="btn-ordenar">ORDENAR</a></li>
+          <li><a href="#" id="btn-pokecientifico">POKECIENTIFICO</a></li>
         </ul>
       </nav>
     </div>
     <div class="wrap">
-      <div class="store-pokemon">
+      <div id="pag-inicio">
+      <h1> BIENVENIDOS A POKEMON</h1>
+      </div>
+      <div class="store-pokemon" id="pag-filtrar">
         <aside class="mostpower_list">
           <ul>
             <li><a href="#" id="most-evolution" class="category-pokemon" value="bcd">MAYOR EVOLUCION</a></li>
@@ -50,6 +53,30 @@
         </aside>
         <section class = "pokemon-box-card">
             <div id="container-list" class="card-link">
+            </div>
+        </section>
+      </div>
+      <div id="pag-ordenar">
+        <aside class="mostpower_list">
+          <ul>
+            <li><a href="#" class="category-pokemon">ASCENDENTE</a></li>
+            <li><a href="#" class="category-pokemon">DESCENDENTE</a></li>
+          </ul>
+        </aside>
+        <section class = "pokemon-box-card">
+            <div id="container-ordenar" class="card-link">
+            </div>
+        </section>
+      </div>
+      <div id="pag-pokecientifico">
+        <aside class="mostpower_list">
+          <ul>
+            <li><a href="#" class="category-pokemon">PROMEDIO</a></li>
+            <li><a href="#" class="category-pokemon">MODA</a></li>
+          </ul>
+        </aside>
+        <section class = "pokemon-box-card">
+            <div id="container-pokecientifico" class="card-link">
             </div>
         </section>
       </div>

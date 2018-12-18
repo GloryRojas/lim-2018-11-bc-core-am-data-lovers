@@ -35,10 +35,6 @@ header{
   background: #4E94AB;
   justify-content: center;
 }
-#btn-menu{
-  display: none;
-  padding: 10px;
-}
 .menu-horizontal label{
   display: none;
   padding: 10px;
@@ -69,8 +65,17 @@ header{
   width: 90%;
   margin: auto;
 }
-.store-pokemon{
-  display: flex;
+#pag-inicio{
+  display: block;
+}
+#pag-filtrar{
+  display: none;
+}
+#pag-ordenar{
+  display: none;
+}
+#pag-pokecientifico{
+  display: none;
 }
 .mostpower_list{
   display: flex;
