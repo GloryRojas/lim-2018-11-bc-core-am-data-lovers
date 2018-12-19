@@ -25,27 +25,39 @@ const butonFiltrar = document.getElementById('btn-filtrar');
 const butonOrdenar = document.getElementById('btn-ordenar');
 const butonPokecientifico = document.getElementById('btn-pokecientifico');
 
-butonInicio.addEventListener("click", () => {
-  pagInicio.style.display = "block";
-  pagFiltrar.style.display = "none";
-  pagOrdenar.style.display = "none";
-  pagPokecientifico.style.display = "none";
+butonInicio.addEventListener('click', () => {
+  pagInicio.style.display = 'block';
+  pagFiltrar.style.display = 'none';
+  pagOrdenar.style.display = 'none';
+  pagPokecientifico.style.display = 'none';
 });
-butonFiltrar.addEventListener("click", () => {
-  pagInicio.style.display = "none";
-  pagFiltrar.style.display = "block";
-  pagOrdenar.style.display = "none";
-  pagPokecientifico.style.display = "none";
+butonFiltrar.addEventListener('click', () => {
+  pagInicio.style.display = 'none';
+  pagFiltrar.style.display = 'block';
+  pagOrdenar.style.display = 'none';
+  pagPokecientifico.style.display = 'none';
 });
-butonOrdenar.addEventListener("click", () => {
-  pagInicio.style.display = "none";
-  pagFiltrar.style.display = "none";
-  pagOrdenar.style.display = "block";
-  pagPokecientifico.style.display = "none";
+butonOrdenar.addEventListener('click', () => {
+  pagInicio.style.display = 'none';
+  pagFiltrar.style.display = 'none';
+  pagOrdenar.style.display = 'block';
+  pagPokecientifico.style.display = 'none';
 });
-butonPokecientifico.addEventListener("click", () => {
-  pagInicio.style.display = "none";
-  pagFiltrar.style.display = "none";
-  pagOrdenar.style.display = "none";
-  pagPokecientifico.style.display = "block";
+butonPokecientifico.addEventListener('click', () => {
+  pagInicio.style.display = 'none';
+  pagFiltrar.style.display = 'none';
+  pagOrdenar.style.display = 'none';
+  pagPokecientifico.style.display = 'block';
+});
+
+// Funcion ORDENAR
+const containerOrdenar = document.getElementById('container-ordenar');
+const btnAscen = document.getElementById('btn-ascen');
+const btnDescen = document.getElementById('btn-descen');
+
+btnAscen.addEventListener('click', () => {
+  containerOrdenar.innerHTML = crearTemplateDeCard(arrAscenName);
+});
+btnDescen.addEventListener('click', () => {
+  containerOrdenar.innerHTML = crearTemplateDeCard(arrDescenName);
 });

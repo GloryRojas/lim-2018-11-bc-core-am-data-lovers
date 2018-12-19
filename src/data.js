@@ -1,5 +1,4 @@
 // Construyendo función para copiar la data
-
 const arrpokemon = POKEMON.pokemon;
 const datacopy = (arr) => {
   const cloneArrPokemon = [];
@@ -43,7 +42,7 @@ const crearTemplateDeCard = (data) => {
 const mostEvolutionPokemon = dataPokemon.filter(evolucion => (evolucion.candy_count === undefined));
 
 // Filtrando pokemones según condition  'Tipo'
-const filterData = (data, condition)=>{
+const filterData = (data, condition) => {
   let arrType = [];
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[i].type.length; j++) {
@@ -56,3 +55,27 @@ const filterData = (data, condition)=>{
 };
 
 // Funcion ORDENAR
+let arrAscenName = dataPokemon.sort((a, b) => {
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name === b.name) {
+    return 0;
+  }
+  return -1;
+});
+
+let arrDescenName = dataPokemon.sort((a, b) => {
+  if (a.name < b.name) {
+    return 1;
+  }
+  if (a.name === b.name) {
+    return 0;
+  }
+  return -1;
+});
+
+
+window.dataLover = {
+  mostEvolutionPokemon,
+}
