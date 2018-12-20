@@ -114,37 +114,47 @@ nav ul li a:hover{
     font-size: 15px;
     text-align: justify;
 }
-#section4 aside#right h1{
-    line-height: 50px;
-    text-align: center;
-    background: gray;
-    color: white;
-    margin-bottom: 5px;
+
+#page-init{
+    display: block;
 }
-#section4 aside#right input{
+#page-order{
+    display: none;
+}
+#page-filter{
+    display: none;
+}
+#page-final{
+    display: none;
+}
+/* cajitas pokemon */
+.pokemon-box-card{
+    width: 82%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .card-link{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  .blog-card{
     width: 100%;
-    padding: 10px;
-    margin: 5px 0;    
-}
-#section4 aside#right input[type="text"]{
-    background: url(img/user.png);
-    background-repeat:no-repeat;
-    background-position: right;
-    background-size: contain;
-
-}
-#section4 aside#right input[type="password"]{
-    background: url(img/pass.jpg);
-    background-repeat:no-repeat; 
-    background-position: right; 
-    background-size: contain;
-}
-#section4 aside#right input[type="submit"]{
-    background: black;
-    border: 0;
-    color: azure;
-
-}
+    background: rgba(227, 146, 175, 0.7);
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+  
+  }
+  .post-image .article-details{
+    display: inline;
+  }
 /*--=======================================
 SECTION 5
 =============================================*/

@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/font/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -51,66 +52,69 @@
         ===========================================-->
         <nav class="row">
             <ul>
-                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#">boton 1</a></li>
-                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#">boton 2</a></li>
-                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#">boton 3</a></li>
+                <li class="col-lg-3 col-md-2 col-sm-2 col-xs-2"><a href="#" id="btn-init">Inicio</a></li>
+                <li class="col-lg-3 col-md-2 col-sm-2 col-xs-2"><a href="#" id="btn-filter">Filtrar</a></li>
+                <li class="col-lg-3 col-md-2 col-sm-2 col-xs-2"><a href="#" id="btn-order">Ordenar</a></li>
+                <li class="col-lg-3 col-md-2 col-sm-2 col-xs-2"><a href="#" id="btn-final">pokemon</a></li>
                 <!--<li class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><a href="#">boton 4</li></a>
                     <li class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><a href="#">boton 5</li></a>-->
             </ul>
         </nav>
-        <!--========================================
-            SECTION 3
-        ===========================================-->
-        <section id="section3" class="row">
 
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <center>
-                    <h1>Agua</h1>
-                    <img id="sec3Img1" width="100" onclick="btnPokemonWater()">
-                    <h2 id="sec3Tit1">Lorem Ipsum</h2>
-                    
-                </center>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <center>
-                    <h1>Tierra</h1>
-                    <img id="sec3Img2" width="100" onclick="btnPokemonGround()">
-                    <h2 id="sec3Tit2">Lorem Ipsum</h2>  
-                </center>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <center>
-                    <h1>Aire</h1>
-                    <img id="sec3Img3" width="100" onclick="btnPokemonFlying()">
-                    <h2 id="sec3Tit3">Lorem Ipsum</h2>
-                    
-                </center>
-            </div>
-        </section>
         <!--========================================
             SECTION 4
         ===========================================-->
         <section id="section4" class="row">
-            <aside id="left" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <ul>
-                    <li><i class="icon-cheveron-right"><a href="#">link 1</a></i></li>
-                    <li><i class="icon-cheveron-right"><a href="#">link 2</a></i></li>
-                    <li><i class="icon-cheveron-right"><a href="#">link 3</a></i></li>
-                    <li><i class="icon-cheveron-right"><a href="#">link 4</a></i></li>
-                </ul>
-            </aside>
-            <article class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <h1 id="contTypePok"></h1>
+            <div id="page-init">
+                bienvenidos a pokemon go
+            </div>
+            <div id="page-filter">
+                <aside id="left" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 
-                <div class="row" id="contPokemones">
+                    <ul id="contType">
+                        <li><i class="icon-cheveron-right"><a href="#" value="Normal">Normal</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Fire">Fuego</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Water">Agua</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Electric">Electrico</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Grass">Planta</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Ice">Hielo</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Fighting">Lucha</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Poison">Veneno</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Ground">Tierra</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Flying">Volador</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Psychic">Psiquico</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Bug">Bichos</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Rock">Roca</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Ghost">Fantasma</a></i></li>
+                        <li><i class="icon-cheveron-right"><a href="#" value="Dragon">Dragon</a></i></li>
 
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
-                        <img src=*|img|* width="100%">
-                        <span> *|name|* </span>
+                    </ul>
+                </aside>
+
+                <article class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+
+                    <div id="contPokemones" class="pokemon-box-card">
                     </div>
 
-                </div>
-            </article>
+                </article>
+            </div>
+            <div id="page-order">
+                <aside class="">
+                    <ul>
+                        <li><a href="#" class="category-pokemon" id="btn-ascen">ASCENDENTE</a></li>
+                        <li><a href="#" class="category-pokemon" id="btn-descen">DESCENDENTE</a></li>
+                    </ul>
+                </aside>
+
+                <section class="pokemon-box-card">
+                    <div id="container-ordenar" class="card-link">
+                    </div>
+                </section>
+
+            </div>
+            <div id="page-final">
+                cuarta pantalla
+            </div>
         </section>
         <!--========================================
             SECTION 5
@@ -121,7 +125,7 @@
     </div>
 
     <script src="data/pokemon/pokemon.js"></script>
-
+    <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
 
