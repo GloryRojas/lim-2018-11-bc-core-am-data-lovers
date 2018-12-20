@@ -1,18 +1,15 @@
 //  const ulContainer = document.getElementById('container-list');
 //  ulContainer.innerHTML = templateList;
 //  Mostrando todos los pokemones.
+const arrpokemon = POKEMON.pokemon;
+const dataPokemon = pokeLover.datacopy(arrpokemon);
 const containerList = document.getElementById('container-list');
-containerList.innerHTML = crearTemplateDeCard(dataPokemon);
+containerList.innerHTML = pokeLover.crearTemplateDeCard(dataPokemon);
 
-//  Mostrando los mas evolucionados
-const mostEvolution = document.getElementById('most-evolution');
-mostEvolution.addEventListener('click', () => {
-  containerList.innerHTML = crearTemplateDeCard(mostEvolutionPokemon);
-});
 //  Mostrando pokemones segun tipo:
 const containerTypes = document.getElementById('cont-tipos');
-containerTypes.addEventListener('click', (e) => {
-  containerList.innerHTML = crearTemplateDeCard(filterData(dataPokemon, e.target.getAttribute('value')))
+containerTypes.addEventListener('click', (event) => {
+  containerList.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterData(dataPokemon, event.target.getAttribute('value')));
 });
 
 const pagInicio = document.getElementById('pag-inicio');
@@ -56,8 +53,8 @@ const btnAscen = document.getElementById('btn-ascen');
 const btnDescen = document.getElementById('btn-descen');
 
 btnAscen.addEventListener('click', () => {
-  containerOrdenar.innerHTML = crearTemplateDeCard(arrAscenName);
+  containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 0));
 });
 btnDescen.addEventListener('click', () => {
-  containerOrdenar.innerHTML = crearTemplateDeCard(arrDescenName);
+  containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 'DESCENDENTE'));
 });

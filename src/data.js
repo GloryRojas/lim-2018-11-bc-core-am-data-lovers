@@ -1,5 +1,4 @@
 // Construyendo función para copiar la data
-const arrpokemon = POKEMON.pokemon;
 const datacopy = (arr) => {
   const cloneArrPokemon = [];
   for (let i = 0; i < arr.length; i++) {
@@ -7,12 +6,7 @@ const datacopy = (arr) => {
   }
   return cloneArrPokemon;
 };
-// Nuevo array : console.log(datacopy(arrpokemon));
-// Array original : console.log(arrpokemon);
-
 // Array copia de la data original ---> Aqui iniciamos la funcionalidad.
-
-const dataPokemon = datacopy(arrpokemon);
 
 // Funcion para pintar tarjetas con datos pokemon
 const crearTemplateDeCard = (data) => {
@@ -33,13 +27,12 @@ const crearTemplateDeCard = (data) => {
       </div>
     `;
     templateListOfCards += card;
-  })
-  return templateListOfCards
+  });
+  return templateListOfCards;
 };
 
-
 // Obteniendo objetos con pokemons mas evolucionados
-const mostEvolutionPokemon = dataPokemon.filter(evolucion => (evolucion.candy_count === undefined));
+// const mostEvolutionPokemon = dataPokemon.filter(evolucion => (evolucion.candy_count === undefined));
 
 // Filtrando pokemones según condition  'Tipo'
 const filterData = (data, condition) => {
@@ -47,35 +40,37 @@ const filterData = (data, condition) => {
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[i].type.length; j++) {
       if (data [i].type[j] === condition) {
-        arrType.push(data[i])
+        arrType.push(data[i]);
       }
     }
   }
   return arrType;
 };
-
 // Funcion ORDENAR
-let arrAscenName = dataPokemon.sort((a, b) => {
-  if (a.name > b.name) {
-    return 1;
+const sortData = (data, sortBy, sortOrder) => {
+  let arrAscenVar;
+  if (sortBy === 'name') {
+    arrAscenVar = data.sort((compareA, compareB) => {
+      if (compareA.name > compareB.name) {
+        return 1;
+      }
+      if (compareA.name === compareB.name) {
+        return 0;
+      }
+      return -1;
+    });
   }
-  if (a.name === b.name) {
-    return 0;
+  if (sortOrder === 'DESCENDENTE') {
+    arrAscenVar = arrAscenVar.reverse();
   }
-  return -1;
-});
+  return arrAscenVar;
+};
 
-let arrDescenName = dataPokemon.sort((a, b) => {
-  if (a.name < b.name) {
-    return 1;
-  }
-  if (a.name === b.name) {
-    return 0;
-  }
-  return -1;
-});
+// Creando objeto para englobar todas las funciones
 
-
-window.dataLover = {
-  mostEvolutionPokemon,
-}
+window.pokeLover = {
+  datacopy,
+  crearTemplateDeCard,
+  filterData,
+  sortData,
+};
