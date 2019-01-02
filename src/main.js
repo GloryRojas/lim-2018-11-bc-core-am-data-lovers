@@ -58,3 +58,10 @@ btnAscen.addEventListener('click', () => {
 btnDescen.addEventListener('click', () => {
   containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 'DESCENDENTE'));
 });
+
+// Funcion estadistica
+const containerPokecientifico = document.getElementById('container-pokecientifico');
+const btnProb = document.getElementById('btn-prob');
+btnProb.addEventListener('click', () => {
+  containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.computeStats(dataPokemon));
+});

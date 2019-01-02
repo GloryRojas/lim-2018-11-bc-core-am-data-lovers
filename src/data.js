@@ -65,7 +65,13 @@ const sortData = (data, sortBy, sortOrder) => {
   }
   return arrAscenVar;
 };
-
+// Funcion Reduce para determinar el pokemon mas grande y el mas pequeño.
+const computeStats = (data) => {
+  let majorSpawns = data.reduce(function(valor1, valor2) {
+    return valor1['avg_spawns'] > valor2['avg_spawns'] ? valor1 : valor2;
+  });
+  return majorSpawns;
+};
 // Creando objeto para englobar todas las funciones
 
 window.pokeLover = {
@@ -73,4 +79,5 @@ window.pokeLover = {
   crearTemplateDeCard,
   filterData,
   sortData,
+  computeStats,
 };
