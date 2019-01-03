@@ -65,13 +65,16 @@ const sortData = (data, sortBy, sortOrder) => {
   }
   return arrAscenVar;
 };
-// Funcion Reduce para determinar el pokemon mas grande y el mas pequeño.
+// Funcion Reduce para determinar el pokemon con mayor probabilidad de aparecer.
 const computeStats = (data) => {
+  let arrCompute = [];
   let majorSpawns = data.reduce(function(valor1, valor2) {
     return valor1['avg_spawns'] > valor2['avg_spawns'] ? valor1 : valor2;
   });
-  return majorSpawns;
+  arrCompute.push(majorSpawns);
+  return arrCompute;
 };
+
 // Creando objeto para englobar todas las funciones
 
 window.pokeLover = {
