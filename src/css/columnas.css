@@ -1,0 +1,71 @@
+/*global*/
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box; /*propiedad que no tenga encuenta el border aplicado, asegurando que el relleno y el borde estan incluido en ancho y altura de la caja*/
+}
+.container{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+[class*="col-"]{
+    float: left;
+    border: solid 1px black;
+    padding: 20px;
+}
+.row{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    /*las columnas dentro de una fila estan flotando a la izquierda,
+    y por lo tanto se toman fuera del flujo de la pagina, y otros 
+    elementos seran colocados como si no fueran las columnas. PARA EVITAR ESTO VAMOS ANADIR UN ESTILO QUE 
+    EL FLUJO */
+    clear: both;/*respete solo los elemtos flotantes que estan en esta fila*/
+    display:table; /*respete el area que esta generando esta cajas flotantes */
+}
+/*El total de las columnas es 12, para saber el tamaño de las 
+otras 11 debemmos hacer una regla de 3--> "n*100/12 */
+.col-12{
+    width: 100%;
+}
+.col-11{
+    width: 91.66666667%
+}
+.col-10{
+    width: 83.33333333%
+}
+.col-9{
+    width: 75%;
+}
+.col-8{
+    width: 66.66666667%;
+}
+.col-7{
+    width: 58.33333333%;
+}
+.col-6{
+    width: 50%;
+}
+.col-5{
+    width: 41.6666666%;
+}
+.col-4{
+    width: 33.33333333%;
+}
+.col-3{
+    width: 25%;
+}
+.col-2{
+    width: 16.66666667%;
+}
+.col-1{
+    width: 8.33333333%;
+}
+

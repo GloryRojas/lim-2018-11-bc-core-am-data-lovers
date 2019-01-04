@@ -1,3 +1,4 @@
+
 // Construyendo función para copiar la data
 const datacopy = (arr) => {
   const cloneArrPokemon = [];
@@ -84,3 +85,4 @@ window.pokeLover = {
   sortData,
   computeStats,
 };
+
