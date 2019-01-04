@@ -11,26 +11,25 @@ font-family: 'Quicksand', sans-serif;*/
   box-sizing: border-box;
 }
 body{
-  background-image: url(img/machupicchu.jpg);
+  /*background-image: url(img/machupicchu.jpg);*/
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   font-family: 'Roboto', sans-serif;
 }
 header{
-  max-width: 1100px;
   width: 100%;
   text-align: center;
   margin: auto;
   background-color: rgba(255, 0, 0, 0.5);
 }
 .img-header{
-  width: 20%;
+  width: 10%;
   display: inline;
   margin: auto;
 }
 .img-header-center{
-  width: 50%;
+  width: 35%;
 }
 .menu-horizontal{
   width: 100%;
@@ -67,6 +66,17 @@ header{
   width: 90%;
   margin: auto;
 }
+.initial-card{
+  padding: 10px;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: blue;
+}
+.initial-card img{
+  display: block;
+  margin: auto;
+}
 #pag-inicio{
   display: block;
 }
@@ -79,23 +89,28 @@ header{
 #pag-pokecientifico{
   display: none;
 }
-.mostpower_list{
-  display: flex;
-  flex-direction: column;
+.btn-pokemon{
+  float: left;
   margin-top: 15px;
   padding: 2px;
   width: 18%;
 }
-.mostpower_list .category-pokemon{
-  display: block;
+#btn-menu{
+  display: none;
+}
+.category-pokemon{
+  display: inline-block;
   width: 90%;
   padding: 17px 0;
   margin-bottom: 17px;
   background: #C5F8F7;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   text-decoration: none;
   color: #400419;
+}
+.list-btn li{
+  list-style: none;
 }
 /* cajitas pokemon */
 .pokemon-box-card{
@@ -134,7 +149,6 @@ header{
 .post-description{
   display: block;
 }
-
 @media (max-width:768px){
   .menu-horizontal label{
     display: block;
