@@ -1,66 +1,88 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-/*
-const example = () => {
-  return 'example';
-};
 
-window.example = example;
-containerList.innerHTML= templateCard (arrPokemon);
-*/
-const arrPokemon = POKEMON.pokemon;
-// funcion para rellenar tarjetas con datos de pokemones
-const templateCard = (data) => {
+// Construyendo función para copiar la data
+const datacopy = (arr) => {
+  const cloneArrPokemon = [];
+  for (let i = 0; i < arr.length; i++) {
+    cloneArrPokemon.push(Object.assign({}, arr[i]));
+  }
+  return cloneArrPokemon;
+};
+// Array copia de la data original ---> Aqui iniciamos la funcionalidad.
+
+// Funcion para pintar tarjetas con datos pokemon
+const crearTemplateDeCard = (data) => {
   let templateListOfCards = '';
-  // recorremos  nuestra array con forEach
+  // recorremos nuestro array con forEach
   data.forEach((pokemon) => {
+    // creamos un template(string) por cada elemento del array
     const card = `
-      <div class="card-link">
-        <article class="blog-card">
-          <img class="post-image" src="${pokemon.img}"/>
-          <h3 class="post-tittle">${pokemon.name}</h3>
-          <div class="article-details">
-            <h4 class="post-category">${pokemon.type}</h4>
-            <p class="post-description">Altura: ${pokemon.height}</p>
+      <div class='card-link'>
+        <article class='blog-card'>
+          <img class='post-image' src='${ pokemon.img }' />
+          <div class='article-details'>
+            <h3 class='post-title'>${ pokemon.name }</h3>
+            <h4 class='post-category'>Tipo: ${ pokemon.type }</h4>
+            <p class='post-description'> ${ pokemon.candy }</p>
           </div>
         </article>
-      </div>  
-    ` ;
+      </div>
+    `;
     templateListOfCards += card;
-  })
+  });
   return templateListOfCards;
-}
+};
 
-const showEvolution = arrPokemon.filter(evolution => (evolution.candy-count === undefined));
+// Obteniendo objetos con pokemons mas evolucionados
+// const mostEvolutionPokemon = dataPokemon.filter(evolucion => (evolucion.candy_count === undefined));
 
-// filtro de pokemones segun tipo:
+// Filtrando pokemones según condition  'Tipo'
 const filterData = (data, condition) => {
   let arrType = [];
   for (let i = 0; i < data.length; i++) {
-    for (let x = 0; x < data[i].type.length; x++) {
-      if (data[i].type[x] === condition) {
+    for (let j = 0; j < data[i].type.length; j++) {
+      if (data [i].type[j] === condition) {
         arrType.push(data[i]);
       }
     }
   }
   return arrType;
-}
-// Funcion ordenar
+};
+// Funcion ORDENAR
 const sortData = (data, sortBy, sortOrder) => {
   let arrAscenVar;
   if (sortBy === 'name') {
-    arrAscenVar = data.sort((a, b) => {
-      if (a.name > b.name) {
+    arrAscenVar = data.sort((compareA, compareB) => {
+      if (compareA.name > compareB.name) {
         return 1;
       }
-      if (a.name === b.name) {
+      if (compareA.name === compareB.name) {
         return 0;
       }
       return -1;
     });
   }
-  if (sortOrder === 'descendente') {
+  if (sortOrder === 'DESCENDENTE') {
     arrAscenVar = arrAscenVar.reverse();
   }
   return arrAscenVar;
 };
+// Funcion Reduce para determinar el pokemon con mayor probabilidad de aparecer.
+const computeStats = (data) => {
+  let arrCompute = [];
+  let majorSpawns = data.reduce(function(valor1, valor2) {
+    return valor1['avg_spawns'] > valor2['avg_spawns'] ? valor1 : valor2;
+  });
+  arrCompute.push(majorSpawns);
+  return arrCompute;
+};
+
+// Creando objeto para englobar todas las funciones
+
+window.pokeLover = {
+  datacopy,
+  crearTemplateDeCard,
+  filterData,
+  sortData,
+  computeStats,
+};
+

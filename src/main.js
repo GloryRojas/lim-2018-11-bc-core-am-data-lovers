@@ -1,194 +1,69 @@
-const containerList = document.getElementById('contPokemones');
 
-//funcion monstrar tipos de pokemones
-const containerType = document.getElementById('contType');
-containerType.addEventListener('click', (event) => {
-  containerList.innerHTML = templateCard(filterData(arrPokemon, event.target.getAttribute("value")));
+//  const ulContainer = document.getElementById('container-list');
+//  ulContainer.innerHTML = templateList;
+//  Mostrando todos los pokemones.
+const arrpokemon = POKEMON.pokemon;
+const dataPokemon = pokeLover.datacopy(arrpokemon);
+const containerList = document.getElementById('container-list');
+containerList.innerHTML = pokeLover.crearTemplateDeCard(dataPokemon);
+
+//  Mostrando pokemones segun tipo:
+const containerTypes = document.getElementById('cont-tipos');
+containerTypes.addEventListener('click', (event) => {
+  containerList.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterData(dataPokemon, event.target.getAttribute('value')));
 });
 
-const pageInit = document.getElementById('page-init');
-const pageOrder = document.getElementById('page-order');
-const pageFilter = document.getElementById('page-filter');
-const pageFinal = document.getElementById('page-final');
+const pagInicio = document.getElementById('pag-inicio');
+const pagFiltrar = document.getElementById('pag-filtrar');
+const pagOrdenar = document.getElementById('pag-ordenar');
+const pagPokecientifico = document.getElementById('pag-pokecientifico');
 
-const btnInit = document.getElementById('btn-init');
-const btnFilter = document.getElementById('btn-filter');
-const btnOrder = document.getElementById('btn-order');
-const btnFinal = document.getElementById('btn-final');
+const butonInicio = document.getElementById('btn-inicio');
+const butonFiltrar = document.getElementById('btn-filtrar');
+const butonOrdenar = document.getElementById('btn-ordenar');
+const butonPokecientifico = document.getElementById('btn-pokecientifico');
 
-btnInit.addEventListener('click', () => {
-  pageInit.style.display = 'block';
-  pageFilter.style.display = 'none';
-  pageOrder.style.display = 'none';
-  pageFinal.style.display = 'none';
+butonInicio.addEventListener('click', () => {
+  pagInicio.style.display = 'block';
+  pagFiltrar.style.display = 'none';
+  pagOrdenar.style.display = 'none';
+  pagPokecientifico.style.display = 'none';
+});
+butonFiltrar.addEventListener('click', () => {
+  pagInicio.style.display = 'none';
+  pagFiltrar.style.display = 'block';
+  pagOrdenar.style.display = 'none';
+  pagPokecientifico.style.display = 'none';
+});
+butonOrdenar.addEventListener('click', () => {
+  pagInicio.style.display = 'none';
+  pagFiltrar.style.display = 'none';
+  pagOrdenar.style.display = 'block';
+  pagPokecientifico.style.display = 'none';
+});
+butonPokecientifico.addEventListener('click', () => {
+  pagInicio.style.display = 'none';
+  pagFiltrar.style.display = 'none';
+  pagOrdenar.style.display = 'none';
+  pagPokecientifico.style.display = 'block';
 });
 
-btnFilter.addEventListener('click', () => {
-  pageInit.style.display = 'none';
-  pageFilter.style.display = 'block';
-  pageOrder.style.display = 'none';
-  pageFinal.style.display = 'none';
+// Funcion ORDENAR
+const containerOrdenar = document.getElementById('container-ordenar');
+const btnAscen = document.getElementById('btn-ascen');
+const btnDescen = document.getElementById('btn-descen');
+
+btnAscen.addEventListener('click', () => {
+  containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 0));
+});
+btnDescen.addEventListener('click', () => {
+  containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 'DESCENDENTE'));
 });
 
-btnOrder.addEventListener('click', () => {
-  pageInit.style.display = 'none';
-  pageFilter.style.display = 'none';
-  pageOrder.style.display = 'block';
-  pageFinal.style.display = 'none';
+// Funcion estadistica
+const containerPokecientifico = document.getElementById('container-pokecientifico');
+const btnProb = document.getElementById('btn-prob');
+btnProb.addEventListener('click', () => {
+  containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.computeStats(dataPokemon));
 });
 
-btnFinal.addEventListener('click', () => {
-  pageInit.style.display = 'none';
-  pageFilter.style.display = 'none';
-  pageOrder.style.display = 'none';
-  pageFinal.style.display = 'block';
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-
-
-const htmlOriginal = document.getElementById("contPokemones").innerHTML;
-
-var arrPokemon = POKEMON.pokemon;
-document.getElementById("sec3Tit1").innerHTML = arrPokemon[0].name;
-document.getElementById("sec3Tit2").innerHTML = arrPokemon[104].name;
-document.getElementById("sec3Tit3").innerHTML = arrPokemon[15].name;
-
-document.getElementById("sec3Img1").src = arrPokemon[0].img;
-//solo se ejecuta una vez
-
-function btnPokemonWater() {
-  let newHtmlGeneration = "";
-  document.getElementById("contTypePok").innerHTML = "Tipo Agua";
-  for (let i = 0; i < pWater.length; i++) {
-    newHtmlGeneration += htmlOriginal.replace("*|img|*", pWater[i].img).replace("*|name|*", pWater[i].name);
-  }
-  document.getElementById("contPokemones").innerHTML = newHtmlGeneration;
-}
-
-document.getElementById("sec3Img2").src = arrPokemon[104].img;
-//solo se ejecuta una vez
-let pGround = [];
-for (let i = 0; i < arrPokemon.length; i++) {
-  for (let x = 0; x < arrPokemon[i].type.length; x++) {
-    if (arrPokemon[i].type[x] === "Ground") {
-      pGround.push(arrPokemon[i])
-    }
-  }
-}
-
-function btnPokemonGround() {
-  let newHtmlGeneration = "";
-  document.getElementById("contTypePok").innerHTML = "Tipo Tierra";
-  for (let i = 0; i < pGround.length; i++) {
-    newHtmlGeneration += htmlOriginal.replace("*|img|*", pGround[i].img).replace("*|name|*", pGround[i].name);
-  }
-  document.getElementById("contPokemones").innerHTML = newHtmlGeneration;
-}
-
-document.getElementById("sec3Img3").src = arrPokemon[15].img;
-//solo se ejecuta una vez
-let pFlying = [];
-for (let i = 0; i < arrPokemon.length; i++) {
-  for (let x = 0; x < arrPokemon[i].type.length; x++) {
-    if (arrPokemon[i].type[x] === "Flying") {
-      pFlying.push(arrPokemon[i])
-    }
-  }
-}
-
-function btnPokemonFlying() {
-  let newHtmlGeneration = "";
-  document.getElementById("contTypePok").innerHTML = "Tipo Aire";
-  for (let i = 0; i < pFlying.length; i++) {
-    newHtmlGeneration += htmlOriginal.replace("*|img|*", pFlying[i].img).replace("*|name|*", pFlying[i].name);
-  }
-  document.getElementById("contPokemones").innerHTML = newHtmlGeneration;
-}
-
-for (let i = 0; i < POKEMON.pokemon.length; i++) {
-  console.log(POKEMON.pokemon[i].type);
-  //document.getElementById("contPokem").innerHTML += "<p>" + POKEMON.pokemon[i].name+ " "+ POKEMON.pokemon[i].num + "</p>";
-}
-
-
-var arrEvolution = [];
-var arrUndef = [];
-for (let i = 0; i < arrPokemon.length; i++) {
- arrEvolution.push(arrPokemon[i].candy_count);
- if (arrPokemon[i].candy_count === undefined) {
-   arrUndef.push(arrPokemon[i].name)
- }
-}
-*/

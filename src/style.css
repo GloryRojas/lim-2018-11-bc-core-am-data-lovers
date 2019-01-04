@@ -1,4 +1,173 @@
-.card-link{
-    border: solid 1px black;
 
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Condensed');
+/*
+font-family: 'ZCOOL XiaoWei', serif;
+font-family: 'Noto Serif SC', serif;
+font-family: 'Noto Serif TC', serif;
+font-family: 'Quicksand', sans-serif;*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+body{
+  /*background-image: url(img/machupicchu.jpg);*/
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+}
+header{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.img-header{
+  width: 10%;
+  display: inline;
+  margin: auto;
+}
+.img-header-center{
+  width: 35%;
+}
+.menu-horizontal{
+  width: 100%;
+  background: #4E94AB;
+  justify-content: center;
+}
+.menu-horizontal label{
+  display: none;
+  padding: 10px;
+}
+.menu-horizontal label:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+}
+.menu ul{
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.menu li a{
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.menu li:hover{
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+}
+.wrap{
+  max-width: 1100px;
+  width: 90%;
+  margin: auto;
+}
+.initial-card{
+  padding: 10px;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: blue;
+}
+.initial-card img{
+  display: block;
+  margin: auto;
+}
+#pag-inicio{
+  display: block;
+}
+#pag-filtrar{
+  display: none;
+}
+#pag-ordenar{
+  display: none;
+}
+#pag-pokecientifico{
+  display: none;
+}
+.btn-pokemon{
+  float: left;
+  margin-top: 15px;
+  padding: 2px;
+  width: 18%;
+}
+#btn-menu{
+  display: none;
+}
+.category-pokemon{
+  display: inline-block;
+  width: 90%;
+  padding: 17px 0;
+  margin-bottom: 17px;
+  background: #C5F8F7;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #400419;
+}
+.list-btn li{
+  list-style: none;
+}
+/* cajitas pokemon */
+.pokemon-box-card{
+  width: 82%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card-link{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.blog-card{
+  width: 100%;
+  background: linear-gradient(111.6deg, #FFFFFF 2.76%, #B5FEA7 90.52%);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  grid-template-columns: 2;
+  grid-template-rows: 1;
+}
+.post-title{
+  border-bottom: solid 2px #23F1B4;
+  margin: 0 0 12px 0;
+  font-family: 'Lato', sans-serif;
+  color: #1D8696;
+}
+.article-details{
+  background: #ffff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #424847;
+}
+.post-description{
+  display: block;
+}
+@media (max-width:768px){
+  .menu-horizontal label{
+    display: block;
+    height: 30px;
+  }
+  .menu{
+    position: absolute;
+    background: #4E94AB;
+    width: 50%;
+    margin-left: -50%;
+  }
+  .menu ul{
+    flex-direction: column;
+  }
+  .menu li{
+    border-top: 1px solid #fff;
+  }
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+ }
+}
+

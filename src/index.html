@@ -1,132 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Tutoriales a tu alcance">
-    <meta name="description" content="aprendiando paginas web">
-    <meta name="keywords" content="tutoriales, html, desarrolo web">
+<html>
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Diseño Web responsivos</title>
-    <link rel="sicon" href="img/user.png">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/font/style.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="container">
-        <!--========================================
-            SECTION 1
-        ===========================================-->
-        <header class="row">
-
-            <div id="logo" class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                POKEMON
-            </div>
-
-            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-0"></div>
-
-            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <center id="icon1">
-                        <p>t</p>
-                    </center>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <center id="icon2">
-                        <p>w</p>
-                    </center>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <center id="icon3">
-                        <p>f</p>
-                    </center>
-                </div>
-            </div>
-        </header>
-        <!--=======================================
-            SECTION 2
-        ===========================================-->
-        <nav class="row">
-            <ul>
-                <li class="col-lg-3 col-md-2 col-sm-2 col-xs-2"><a href="#" id="btn-init">Inicio</a></li>
-                <li class="col-lg-3 col-md-2 col-sm-2 col-xs-2"><a href="#" id="btn-filter">Filtrar</a></li>
-                <li class="col-lg-3 col-md-2 col-sm-2 col-xs-2"><a href="#" id="btn-order">Ordenar</a></li>
-                <li class="col-lg-3 col-md-2 col-sm-2 col-xs-2"><a href="#" id="btn-final">pokemon</a></li>
-                <!--<li class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><a href="#">boton 4</li></a>
-                    <li class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><a href="#">boton 5</li></a>-->
-            </ul>
-        </nav>
-
-        <!--========================================
-            SECTION 4
-        ===========================================-->
-        <section id="section4" class="row">
-            <div id="page-init">
-                bienvenidos a pokemon go
-            </div>
-            <div id="page-filter">
-                <aside id="left" class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-
-                    <ul id="contType">
-                        <li><i class="icon-cheveron-right"><a href="#" value="Normal">Normal</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Fire">Fuego</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Water">Agua</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Electric">Electrico</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Grass">Planta</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Ice">Hielo</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Fighting">Lucha</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Poison">Veneno</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Ground">Tierra</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Flying">Volador</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Psychic">Psiquico</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Bug">Bichos</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Rock">Roca</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Ghost">Fantasma</a></i></li>
-                        <li><i class="icon-cheveron-right"><a href="#" value="Dragon">Dragon</a></i></li>
-
-                    </ul>
-                </aside>
-
-                <article class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-
-                    <div id="contPokemones" class="pokemon-box-card">
-                    </div>
-
-                </article>
-            </div>
-            <div id="page-order">
-                <aside class="">
-                    <ul>
-                        <li><a href="#" class="category-pokemon" id="btn-ascen">ASCENDENTE</a></li>
-                        <li><a href="#" class="category-pokemon" id="btn-descen">DESCENDENTE</a></li>
-                    </ul>
-                </aside>
-
-                <section class="pokemon-box-card">
-                    <div id="container-ordenar" class="card-link">
-                    </div>
-                </section>
-
-            </div>
-            <div id="page-final">
-                cuarta pantalla
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/pokeball.png" class="img-header">
+      <img src="img/Pokemonlogo.png" class="img-header-center">
+      <img src="img/Ash.png" class="img-header">
+    </header>
+    <div class="menu-horizontal">
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu"><img src="img/lista.png"></label>
+      <nav class="menu">
+        <ul id="contenedor-item">
+          <li><a href="#" id="btn-inicio">INICIO</a></li>
+          <li><a href="#" id="btn-filtrar">FILTRAR</a></li>
+          <li><a href="#" id="btn-ordenar">ORDENAR</a></li>
+          <li><a href="#" id="btn-pokecientifico">POKECIENTIFICO</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap">
+      <div id="pag-inicio">
+        <div class="initial-card">
+            <img src="http://www.serebii.net/pokemongo/pokemon/039.png">
+            <span>Encuentralos segun tipo</span>
+        </div>
+        <div class="initial-card">
+            <img src="http://www.serebii.net/pokemongo/pokemon/038.png">
+            <span>Ordenalos alfabeticamente</span>
+        </div>
+        <div class="initial-card">
+            <img src="http://www.serebii.net/pokemongo/pokemon/025.png">
+            <span>Incidencia</span>
+        </div>
+      </div>
+      <div class="store-pokemon" id="pag-filtrar">
+        <section class="btn-pokemon">
+          <ul id="cont-tipos" class="list-btn">
+            <li><a href="#" class="category-pokemon" value="Normal">NORMAL</a></li>
+            <li><a href="#" class="category-pokemon" value="Fire">FUEGO</a></li>
+            <li><a href="#" class="category-pokemon" value="Water">AGUA</a></li>
+            <li><a href="#" class="category-pokemon" value="Electric">ELECTRICO</a></li>
+            <li><a href="#" class="category-pokemon" value="Grass">PLANTA</a></li>
+            <li><a href="#" class="category-pokemon" value="Ice">HIELO</a></li>
+            <li><a href="#" class="category-pokemon" value="Fighting">LUCHA</a></li>
+            <li><a href="#" class="category-pokemon" value="Poison">VENENO</a></li>
+            <li><a href="#" class="category-pokemon" value="Ground">TIERRA</a></li>
+            <li><a href="#" class="category-pokemon" value="Flying">VOLADOR</a></li>
+            <li><a href="#" class="category-pokemon" value="Psychic">PSIQUICO</a></li>
+            <li><a href="#" class="category-pokemon" value="Bug">BICHO</a></li>
+            <li><a href="#" class="category-pokemon" value="Rock">ROCA</a></li>
+            <li><a href="#" class="category-pokemon" value="Ghost">FANTASMA</a></li>
+            <li><a href="#" class="category-pokemon" value="Dragon">DRAGON</a></li>
+          </ul>
+        </section>
+        <section class = "pokemon-box-card">
+            <div id="container-list" class="card-link">
             </div>
         </section>
-        <!--========================================
-            SECTION 5
-        ===========================================-->
-        <footer class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">&copy; Todos los derechos reservados</div>
-        </footer>
+      </div>
+      <div id="pag-ordenar">
+        <section class="btn-pokemon">
+          <ul class="list-btn">
+            <li><a href="#" class="category-pokemon" id="btn-ascen">ASCENDENTE</a></li>
+            <li><a href="#" class="category-pokemon" id="btn-descen">DESCENDENTE</a></li>
+          </ul>
+        </section>
+        <section class = "pokemon-box-card">
+            <div id="container-ordenar" class="card-link">
+            </div>
+        </section>
+      </div>
+      <div id="pag-pokecientifico">
+        <section class="btn-pokemon">
+          <ul class="list-btn">
+            <li><a href="#" class="category-pokemon" id="btn-prob">MAS PROBABILIDADES</a></li>
+          </ul>
+        </section>
+        <section class = "pokemon-box-card">
+            <div id="container-pokecientifico" class="card-link">
+            </div>
+        </section>
+      </div>
     </div>
-
-    <script src="data/pokemon/pokemon.js"></script>
+    <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
