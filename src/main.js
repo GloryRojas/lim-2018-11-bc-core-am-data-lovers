@@ -1,3 +1,4 @@
+
 //  const ulContainer = document.getElementById('container-list');
 //  ulContainer.innerHTML = templateList;
 //  Mostrando todos los pokemones.
@@ -65,3 +66,4 @@ const btnProb = document.getElementById('btn-prob');
 btnProb.addEventListener('click', () => {
   containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.computeStats(dataPokemon));
 });
+
