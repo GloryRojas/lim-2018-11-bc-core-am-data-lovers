@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Condensed');
 /*
 font-family: 'ZCOOL XiaoWei', serif;
 font-family: 'Noto Serif SC', serif;
@@ -13,7 +15,7 @@ body{
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  font-family: 'Noto Serif SC', serif;
+  font-family: 'Roboto', sans-serif;
 }
 header{
   max-width: 1100px;
@@ -109,19 +111,28 @@ header{
 }
 .blog-card{
   width: 100%;
-  background: rgba(227, 146, 175, 0.7);
+  background: linear-gradient(111.6deg, #FFFFFF 2.76%, #B5FEA7 90.52%);
   border-radius: 10px;
-  padding: 8px;
+  padding: 20px;
   text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  align-items: center;
-  display: grid;
   grid-template-columns: 2;
   grid-template-rows: 1;
-
 }
-.post-image .article-details{
-  display: inline;
+.post-title{
+  border-bottom: solid 2px #23F1B4;
+  margin: 0 0 12px 0;
+  font-family: 'Lato', sans-serif;
+  color: #1D8696;
+}
+.article-details{
+  background: #ffff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #424847;
+}
+.post-description{
+  display: block;
 }
 
 @media (max-width:768px){

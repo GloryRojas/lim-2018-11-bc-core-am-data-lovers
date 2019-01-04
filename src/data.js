@@ -18,10 +18,10 @@ const crearTemplateDeCard = (data) => {
       <div class='card-link'>
         <article class='blog-card'>
           <img class='post-image' src='${ pokemon.img }' />
-          <h3 class='post-title'>${ pokemon.name }</h3>
           <div class='article-details'>
-            <h4 class='post-category'>${ pokemon.type }</h4>
-            <p class='post-description'>Altura: ${ pokemon.height }</p>
+            <h3 class='post-title'>${ pokemon.name }</h3>
+            <h4 class='post-category'>Tipo: ${ pokemon.type }</h4>
+            <p class='post-description'> ${ pokemon.candy }</p>
           </div>
         </article>
       </div>
