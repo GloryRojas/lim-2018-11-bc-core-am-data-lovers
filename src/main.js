@@ -7,12 +7,6 @@ const dataPokemon = pokeLover.datacopy(arrpokemon);
 const containerList = document.getElementById('container-list');
 containerList.innerHTML = pokeLover.crearTemplateDeCard(dataPokemon);
 
-//  Mostrando pokemones segun tipo:
-const containerTypes = document.getElementById('cont-tipos');
-containerTypes.addEventListener('click', (event) => {
-  containerList.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterData(dataPokemon, event.target.getAttribute('value')));
-});
-
 const pagInicio = document.getElementById('pag-inicio');
 const pagFiltrar = document.getElementById('pag-filtrar');
 const pagOrdenar = document.getElementById('pag-ordenar');
@@ -47,6 +41,12 @@ butonPokecientifico.addEventListener('click', () => {
   pagOrdenar.style.display = 'none';
   pagPokecientifico.style.display = 'block';
 });
+// Funcion FILTRAR
+const containerTypes = document.getElementById('cont-tipos');
+containerTypes.addEventListener('click', (event) => {
+  containerList.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterData(dataPokemon, event.target.getAttribute('value')));
+});
+
 
 // Funcion ORDENAR
 const containerOrdenar = document.getElementById('container-ordenar');

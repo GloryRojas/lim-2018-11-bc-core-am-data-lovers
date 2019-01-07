@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Condensed');
 /*
 font-family: 'ZCOOL XiaoWei', serif;
@@ -16,12 +15,17 @@ body{
   background-attachment: fixed;
   background-position: center;
   font-family: 'Roboto', sans-serif;
+  
+  background:url(img/background-init.webp) center center no-repeat;
+  background-attachment: fixed;
+  background-size:100% auto;
 }
 header{
   width: 100%;
   text-align: center;
   margin: auto;
-  background-color: rgba(255, 0, 0, 0.5);
+  height: 228px;;
+  background: url(img/bannerPok.jpg) center top / cover no-repeat rgb(148, 224, 68);
 }
 .img-header{
   width: 10%;
@@ -35,6 +39,11 @@ header{
   width: 100%;
   background: #4E94AB;
   justify-content: center;
+  
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
 }
 .menu-horizontal label{
   display: none;
@@ -82,6 +91,7 @@ header{
 }
 #pag-filtrar{
   display: none;
+  padding: 70px 0 70px 0px;
 }
 #pag-ordenar{
   display: none;
@@ -149,10 +159,137 @@ header{
 .post-description{
   display: block;
 }
-@media (max-width:768px){
+#container-init{
+  padding: 70px 0 70px 0px;
+}
+#pag-inicio h4{
+  font-weight: 200px;
+  border-bottom: 1px solid #fff;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  padding: 30px 0 30px 30px;
+}
+#pag-inicio p{
+  font-weight: 200px;
+  font-size: 1em;
+  color: #fff;
+  padding: 30px 0 30px 30px;
+}
+
+.fond-text{
+  background: rgba(0, 46, 85, 0.5);
+  
+}
+footer{
+  position: fixed;
+  bottom: 0px;
+  background: #fff;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+.row{
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  clear: both;
+  display:table; 
+}[class*="col-"]{
+  float: left;
+  /*border: solid 1px black;*/
+  padding: 10px;
+}
+.img-init{
+  width: 100%;
+  height: auto;
+}
+/*========================================
+PANTALLA DE ESCRITORIO GRANDE- LARGE (lg)
+===========================================*/
+@media(min-width:1200px){
+
+  .col-lg-12{width: 100%;}
+  .col-lg-11{width: 91.66666667%}
+  .col-lg-10{width: 83.33333333%}
+  .col-lg-9{width: 75%;}
+  .col-lg-8{width: 66.66666667%;}
+  .col-lg-7{width: 58.33333333%;}
+  .col-lg-6{width: 50%;}
+  .col-lg-5{width: 41.6666666%;}
+  .col-lg-4{width: 33.33333333%;}
+  .col-lg-3{width: 25%;}
+  .col-lg-2{width: 16.66666667%;}
+  .col-lg-1{width: 8.33333333%;}
+  .col-lg-0{display: none;}
+  #section4 article p img{
+      width: 50%;
+  }
+  
+}
+/*========================================
+PANTALLA DE ESCRITORIO MEDIANO- LARGE (md)
+===========================================*/
+@media(max-width:1199px) and (min-width:992px){
+
+  .col-md-12{width: 100%;}
+  .col-md-11{width: 91.66666667%}
+  .col-md-10{width: 83.33333333%}
+  .col-md-9{width: 75%;}
+  .col-md-8{width: 66.66666667%;}
+  .col-md-7{width: 58.33333333%;}
+  .col-md-6{width: 50%;}
+  .col-md-5{width: 41.6666666%;}
+  .col-md-4{width: 33.33333333%;}
+  .col-md-3{width: 25%;}
+  .col-md-2{width: 16.66666667%;}
+  .col-md-1{width: 8.33333333%;}
+  .col-md-0{display: none;}
+  #section4 article p img{
+      width: 60%;
+  }
+}
+/*========================================
+PANTALLA DE ESCRITORIO SMALL (sm)
+===========================================*/
+@media(max-width:991px) and (min-width:768px){
+
+  .col-sm-12{width: 100%;}
+  .col-sm-11{width: 91.66666667%}
+  .col-sm-10{width: 83.33333333%}
+  .col-sm-9{width: 75%;}
+  .col-sm-8{width: 66.66666667%;}
+  .col-sm-7{width: 58.33333333%;}
+  .col-sm-6{width: 50%;}
+  .col-sm-5{width: 41.6666666%;}
+  .col-sm-4{width: 33.33333333%;}
+  .col-sm-3{width: 25%;}
+  .col-sm-2{width: 16.66666667%;}
+  .col-sm-1{width: 8.33333333%;}
+  .col-sm-0{display: none;}
+  #section4 article p img{
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+/*========================================
+PANTALLA DE ESCRITORIO PHONES (xs)
+===========================================*/
+@media(max-width:767px){
+  header{
+    height: 60px;
+  }
+  .menu-horizontal{
+    background: none;
+    }
   .menu-horizontal label{
     display: block;
     height: 30px;
+  }
+  .menu-horizontal label:hover{
+   background: none;
   }
   .menu{
     position: absolute;
@@ -169,4 +306,26 @@ header{
   #btn-menu:checked ~ .menu {
     margin: 0;
  }
+body{
+  background-size:auto 100%;
+}
+
+
+  .col-xs-12{width: 100%;}
+  .col-xs-11{width: 91.66666667%}
+  .col-xs-10{width: 83.33333333%}
+  .col-xs-9{width: 75%;}
+  .col-xs-8{width: 66.66666667%;}
+  .col-xs-7{width: 58.33333333%;}
+  .col-xs-6{width: 50%;}
+  .col-xs-5{width: 41.6666666%;}
+  .col-xs-4{width: 33.33333333%;}
+  .col-xs-3{width: 25%;}
+  .col-xs-2{width: 16.66666667%;}
+  .col-xs-1{width: 8.33333333%;}
+  .col-xs-0{display: none;}
+  #section4 article p img{
+      width: 100%;
+      margin-bottom: 20px;
+  }
 }
