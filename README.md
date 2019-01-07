@@ -48,7 +48,7 @@ El acceso a la aplicación Web "PokeLover" es mediante el siguiente Link: https:
 
 Para la versión movil en Android: Primer prototipo basado en el sketch de baja fidelidad.
 
-![](imgReadme/poke.jpg)
+![](imgReadme/pokeAndroid.jpg)
 
 Luego de distintas iteraciones con los usuarios potenciales se  realizaron algunos cambios, básicamente por textos que no se entendían.  
 
@@ -57,7 +57,7 @@ Luego de distintas iteraciones con los usuarios potenciales se  realizaron algun
 Para versión Web:
 Como deberia quedar la pagina inicial de la version web de la aplicación:
 
-![](imgReadme/pokeweb.jpg)
+![](imgReadme/pokeWeb.jpg)
 
 ## Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
@@ -66,16 +66,19 @@ Como deberia quedar la pagina inicial de la version web de la aplicación:
   Todos los resultados de pokemones se muestran en cards.
 
   ![](imgReadme/card.jpg)
+
 2. Permitir al usuario filtrar, ordenar la data.
 
   Dentro del menú de navegación tenemos las opciones que el usuario desee realizar.
 
   ![](imgReadme/nav.jpg)
+
 4. Cálculos estadisticos como minimos o máximos.
 
   La tercera funcion muestra en pantalla la opcion de encontrar al pokemon con mayor incidencia (dentro de la data, seria el pokemon con mayor avg_spawns).
 
   ![](imgReadme/inside.jpg)
+
 5. Aplicación Responsive.
   La app se muestra de manera correcta en cualquier dispositivo movil.
 
