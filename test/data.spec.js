@@ -21,6 +21,23 @@ const output2 = [
   {'num': '001', 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 69},
 ];
 
+const output3 = [
+  {'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3}
+];
+
+const output4 = `
+      <div class='card-link'>
+        <article class='blog-card'>
+          <img class='post-image' src='undefined' />
+          <div class='article-details'>
+            <h3 class='post-title'>Charmander</h3>
+            <h4 class='post-category'>Tipo: Fire</h4>
+            <p class='post-description'> undefined</p>
+          </div>
+        </article>
+      </div>
+    `;
+
 describe('pokeLover', () => {
   it('Debería ser un objeto', () => {
     expect(typeof pokeLover).toBe('object');
@@ -39,6 +56,30 @@ describe('pokeLover', () => {
     });
     it('debería retornar un array de objetos, ordenando de A -Z', () => {
       expect(pokeLover.sortData(input, 'name', 0)).toEqual(output1);
+    });
+  });
+  describe('pokeLover.computeStats', () => {
+    it('Debería ser una funcion', () => {
+      expect(typeof pokeLover.computeStats).toBe('function');
+    });
+    it('debería retornar un array con un objeto con valor 69 para avg_spawns', () => {
+      expect(pokeLover.computeStats(input)).toEqual(output2);
+    });
+  });
+  describe('pokeLover.datacopy', () => {
+    it('Debería ser una funcion', () => {
+      expect(typeof pokeLover.datacopy).toBe('function');
+    });
+    it('debería retornar un array copia del original', () => {
+      expect(pokeLover.datacopy(output)).toEqual(output3);
+    });
+  });
+  describe('pokeLover.crearTemplateDeCard', () => {
+    it('Debería ser una funcion', () => {
+      expect(typeof pokeLover.crearTemplateDeCard).toBe('function');
+    });
+    it('debería retornar un string', () => {
+      expect(pokeLover.crearTemplateDeCard(output)).toEqual(output4);
     });
   });
 });
