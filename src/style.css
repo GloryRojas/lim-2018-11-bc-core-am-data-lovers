@@ -15,7 +15,7 @@ body{
   background-attachment: fixed;
   background-position: center;
   font-family: 'Roboto', sans-serif;
-  
+
   background:url(img/background-init.webp) center center no-repeat;
   background-attachment: fixed;
   background-size:100% auto;
@@ -39,7 +39,7 @@ header{
   width: 100%;
   background: #4E94AB;
   justify-content: center;
-  
+
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -111,15 +111,16 @@ header{
 .category-pokemon{
   display: inline-block;
   width: 90%;
-  padding: 17px 0;
-  margin-bottom: 17px;
-  background: #C5F8F7;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  background: linear-gradient(180deg, rgba(31, 192, 192, 0.78) 0%, #B7ECC0 100%), #C4C4C4;  ;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
   color: #400419;
 }
 .list-btn li{
+
   list-style: none;
 }
 /* cajitas pokemon */
@@ -180,14 +181,14 @@ header{
 
 .fond-text{
   background: rgba(0, 46, 85, 0.5);
-  
+
 }
 footer{
-  position: fixed;
   bottom: 0px;
-  background: #fff;
+  background: #3EF111;
   color: black;
   text-align: center;
+  font-size: 12px;
   width: 100%;
 }
 .row{
@@ -196,7 +197,7 @@ footer{
   width: 100%;
   height: auto;
   clear: both;
-  display:table; 
+  display:table;
 }[class*="col-"]{
   float: left;
   /*border: solid 1px black;*/
@@ -227,7 +228,7 @@ PANTALLA DE ESCRITORIO GRANDE- LARGE (lg)
   #section4 article p img{
       width: 50%;
   }
-  
+
 }
 /*========================================
 PANTALLA DE ESCRITORIO MEDIANO- LARGE (md)

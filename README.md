@@ -41,12 +41,29 @@ El acceso a la aplicación Web "PokeLover" es mediante el siguiente Link: https:
 
   Para trabajar los prototipos de baja fidelidad, se testearon las soluciones con los usuarios potenciales, se muestran líneas abajo los sketches trabajados a mano.
 
+  ![](imgReadme/baj1.jpg)
+
+  ![](imgReadme/baj2.jpg)
+
+  ![](imgReadme/baj3.jpg)
+
+  ![](imgReadme/baj4.jpg)
+
 - Prototipo de Alta Fidelidad.
   Una vez definido el prototipo de baja fidelidad, se inicio con el prototipado de Alta Fidelidad utilizando la herramienta Figma.
 
+  El prototipado de Alta Fidelidad se inicio para el diseño mobile:
+
+  ![](imgReadme/android.jpg)
+
+  Se muestra en la siguiente imagen el prototipo en alta fidelidad para desktop.
+
+  ![](imgReadme/web.jpg)
+
+
 - Testeos de usabilidad.
 
-Para la versión movil en Android: Primer prototipo basado en el sketch de baja fidelidad.
+Para la versión móvil en Android: Primer prototipo basado en el sketch de baja fidelidad.
 
 ![](imgReadme/poke.jpg)
 
@@ -55,9 +72,31 @@ Luego de distintas iteraciones con los usuarios potenciales se  realizaron algun
 ![](imgReadme/pokeAndroid2.jpg)
 
 Para versión Web:
-Como deberia quedar la pagina inicial de la version web de la aplicación:
+Anteriormente se mostró como deberia quedar la aplicación.
 
-![](imgReadme/pokeweb.jpg)
+El primer prototipo quedo de la siguiente manera:
+
+![](imgReadme/primerpProto.jpg)
+
+Funcionalmente el feedback de los encuestados indican que la app es sencilla y de facil entendimiento. Sin embargo los colores utilizados no los asocian con PokemonGo.
+
+Al realizar los cambios y testear con los usuarios se obtuvieron los siguientes resultados:
+
+Pantalla de Inicio:
+
+![](imgReadme/webactual1.jpg)
+
+Pantalla de funcion filtrar:
+
+![](imgReadme/webactual2.jpg)
+
+Pantalla de función ordenar:
+
+![](imgReadme/webactual3.jpg)
+
+Pantalla de función Incidencia:
+
+![](imgReadme/webactual4.jpg)
 
 ## Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
