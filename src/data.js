@@ -1,4 +1,3 @@
-
 // Construyendo función para copiar la data
 const datacopy = (arr) => {
   const cloneArrPokemon = [];
@@ -18,11 +17,11 @@ const crearTemplateDeCard = (data) => {
     const card = `
       <div class='card-link'>
         <article class='blog-card'>
-          <img class='post-image' src='${ pokemon.img }' />
+          <img class='post-image' src='${ pokemon.img}' />
           <div class='article-details'>
-            <h3 class='post-title'>${ pokemon.name }</h3>
-            <h4 class='post-category'>Tipo: ${ pokemon.type }</h4>
-            <p class='post-description'> ${ pokemon.candy }</p>
+            <h3 class='post-title'>${ pokemon.name}</h3>
+            <h4 class='post-category'>Tipo: ${ pokemon.type}</h4>
+            <p class='post-description'> ${ pokemon.candy}</p>
           </div>
         </article>
       </div>
@@ -40,7 +39,7 @@ const filterData = (data, condition) => {
   let arrType = [];
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[i].type.length; j++) {
-      if (data [i].type[j] === condition) {
+      if (data[i].type[j] === condition) {
         arrType.push(data[i]);
       }
     }
@@ -70,12 +69,17 @@ const sortData = (data, sortBy, sortOrder) => {
 const computeStats = (data) => {
   let arrCompute = [];
   let majorSpawns = data.reduce(function(valor1, valor2) {
-    return valor1['avg_spawns'] > valor2['avg_spawns'] ? valor1 : valor2;
+    return valor1['avg_spawns'] > valor2['avg_spawns'] ? valor1 : valor2 ;
   });
   arrCompute.push(majorSpawns);
   return arrCompute;
 };
 
+// Filtrando pokemones de mayor evolucion
+const filterEvolution = (data) => {
+  const mostEvolutionPokemon = data.filter(evolucion => (evolucion.candy_count === undefined));
+  return mostEvolutionPokemon;
+};
 // Creando objeto para englobar todas las funciones
 
 window.pokeLover = {
@@ -84,5 +88,5 @@ window.pokeLover = {
   filterData,
   sortData,
   computeStats,
+  filterEvolution
 };
-

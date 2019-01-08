@@ -34,7 +34,13 @@ El acceso a la aplicación Web "PokeLover" es mediante el siguiente Link: https:
 
   "Yo como usuario de Pokemon Go, quiero saber cuál es el pokemon con mayor incidencia dentro de los 150 pokemones de la región de Kanto."
 
-  //La Definición de terminado aqui seria un boton en el menu de navegación con el nombre "POKECIENTIFICO" en el cual al darle click la pantalla muestre un boton adicional con el nombre "MAS POSIBILIDADES" y éste último al darle click muestre en pantalla la card del pokemon con mayor % de incidencia.
+  //La Definición de terminado aqui seria un boton en el menu de navegación con el nombre "POKECIENTIFICO" en el cual al darle click la pantalla muestre un boton con el nombre "MAS POSIBILIDADES" y éste último al darle click muestre en pantalla la card del pokemon con mayor % de incidencia.
+
+- Historia de Usuario N°4:
+
+  "Yo como usuario de Pokemon Go, quiero saber cuál es el pokemon con mayor evolucion dentro de los 150 pokemones de la región de Kanto."
+
+  //La Definición de terminado aqui seria un boton en el menu de navegación con el nombre "POKECIENTIFICO" en el cual al darle click la pantalla muestre un boton adicional con el nombre "MAYOR EVOLUCION" y éste último al darle click muestre en pantalla la card del pokemon con mayor evolucion.
 
 ## Diseño de la Interfaz de Usuario
 - Prototipo de Baja Fidelidad.
@@ -94,9 +100,10 @@ Pantalla de función ordenar:
 
 ![](imgReadme/webactual3.jpg)
 
-Pantalla de función Incidencia:
+Pantalla de función pokecientifico:
 
-![](imgReadme/webactual4.jpg)
+![](imgReadme/baj5.png)
+
 
 ## Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 

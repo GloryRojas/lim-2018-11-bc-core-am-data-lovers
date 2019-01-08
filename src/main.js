@@ -67,3 +67,7 @@ btnProb.addEventListener('click', () => {
   containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.computeStats(dataPokemon));
 });
 
+const btnEvol = document.getElementById('btn-evol');
+btnEvol.addEventListener('click', () => {
+  containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterEvolution(dataPokemon));
+});

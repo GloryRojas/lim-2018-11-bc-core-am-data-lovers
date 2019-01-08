@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +9,16 @@
 
 <body>
   <div class="container">
-    <!--section1 cabecera-->
+    <!--div1 cabecera-->
     <header>
-      <img src="img/pokeball.png" class="img-header">
-      <img src="img/Pokemonlogo.png" class="img-header-center">
-      <img src="img/Ash.png" class="img-header">
+      <img src="img/pokeball.png" class="img-header" alt="img">
+      <img src="img/Pokemonlogo.png" class="img-header-center" alt="img">
+      <img src="img/Ash.png" class="img-header" alt="img">
     </header>
-    <!--section2 barra de navegacion-->
-    <section class="menu-horizontal">
+    <!--div2 barra de navegacion-->
+    <div class="menu-horizontal">
       <input type="checkbox" id="btn-menu">
-      <label for="btn-menu"><img src="img/lista.png"></label>
+      <label for="btn-menu"><img src="img/lista.png" alt="img"></label>
       <nav class="menu">
         <ul id="contenedor-item">
           <li><a href="#" id="btn-inicio">INICIO</a></li>
@@ -28,14 +27,14 @@
           <li><a href="#" id="btn-pokecientifico">POKECIENTIFICO</a></li>
         </ul>
       </nav>
-    </section>
+    </div>
     <!--primera pagina de inicio-->
     <div class="wrap">
-      <section id="pag-inicio">
+      <div id="pag-inicio">
         <div id="container-init" class="row">
           <div class="col-lg-6 col-xs-12">
             <picture>
-              <img src="img/image-init.png" class="img-init">
+              <img src="img/image-init.png" class="img-init" alt="img">
             </picture>
           </div>
           <div class="col-lg-6 col-xs-12 fond-text">
@@ -50,10 +49,10 @@
               más.</p>
           </div>
         </div>
-      </section>
-      <!--section filtrar-->
+      </div>
+      <!--div filtrar-->
       <div class="store-pokemon" id="pag-filtrar">
-          <section class="btn-pokemon">
+          <div class="btn-pokemon">
             <ul id="cont-tipos" class="list-btn">
               <li><a href="#" class="category-pokemon" value="Normal">NORMAL</a></li>
               <li><a href="#" class="category-pokemon" value="Fire">FUEGO</a></li>
@@ -71,40 +70,42 @@
               <li><a href="#" class="category-pokemon" value="Ghost">FANTASMA</a></li>
               <li><a href="#" class="category-pokemon" value="Dragon">DRAGON</a></li>
             </ul>
-          </section>
-          <section class="pokemon-box-card">
+          </div>
+          <div class="pokemon-box-card">
             <div id="container-list" class="card-link">
             </div>
-          </section>
+          </div>
       </div>
-        <!--section ordenar-->
+        <!--div ordenar-->
       <div id="pag-ordenar">
-          <section class="btn-pokemon">
+          <div class="btn-pokemon">
             <ul class="list-btn">
               <li><a href="#" class="category-pokemon" id="btn-ascen">ASCENDENTE</a></li>
               <li><a href="#" class="category-pokemon" id="btn-descen">DESCENDENTE</a></li>
             </ul>
-          </section>
-          <section class="pokemon-box-card">
+          </div>
+          <div class="pokemon-box-card">
             <div id="container-ordenar" class="card-link">
             </div>
-          </section>
+          </div>
         </div>
-      <!--section incidencia-->
+      <!--div incidencia-->
       <div id="pag-pokecientifico">
-        <section class="btn-pokemon">
+        <div class="btn-pokemon">
           <ul class="list-btn">
-            <li><a href="#" class="category-pokemon" id="btn-prob">MAS PROBABILIDADES</a></li>
+            <li><a href="#" class="category-pokemon" id="btn-prob">MAYOR INCIDENCIA</a></li>
+            <li><a href="#" class="category-pokemon" id="btn-evol">MAYOR EVOLUCION</a></li>
           </ul>
-        </section>
-        <section class="pokemon-box-card">
+        </div>
+        <div class="pokemon-box-card">
           <div id="container-pokecientifico" class="card-link">
           </div>
-        </section>
+        </div>
       </div>
     </div>
   </div>
-  <!--section3-->
+  <!--div3 -->
+
   <footer>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <p>Conéctate con nosotras</p>
@@ -112,6 +113,7 @@
       <p>2019</p>
     </div>
   </footer>
+ 
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>

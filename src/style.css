@@ -1,24 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Condensed');
-/*
-font-family: 'ZCOOL XiaoWei', serif;
-font-family: 'Noto Serif SC', serif;
-font-family: 'Noto Serif TC', serif;
-font-family: 'Quicksand', sans-serif;*/
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body{
-  /*background-image: url(img/machupicchu.jpg);*/
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
   font-family: 'Roboto', sans-serif;
-
-  background:url(img/background-init.webp) center center no-repeat;
+  background:url(img/background-init.webp) center no-repeat;
   background-attachment: fixed;
-  background-size:100% auto;
+  background-size:cover;
 }
 header{
   width: 100%;
@@ -29,7 +20,6 @@ header{
 }
 .img-header{
   width: 10%;
-  display: inline;
   margin: auto;
 }
 .img-header-center{
@@ -39,11 +29,9 @@ header{
   width: 100%;
   background: #4E94AB;
   justify-content: center;
-
-  position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  z-index: 999;
+  z-index: 99;
 }
 .menu-horizontal label{
   display: none;
@@ -71,19 +59,7 @@ header{
   background: rgba(0,0,0,0.3);
 }
 .wrap{
-  max-width: 1100px;
   width: 90%;
-  margin: auto;
-}
-.initial-card{
-  padding: 10px;
-  width: 250px;
-  height: 250px;
-  border-radius: 20px;
-  background-color: blue;
-}
-.initial-card img{
-  display: block;
   margin: auto;
 }
 #pag-inicio{
@@ -91,7 +67,6 @@ header{
 }
 #pag-filtrar{
   display: none;
-  padding: 70px 0 70px 0px;
 }
 #pag-ordenar{
   display: none;
@@ -100,10 +75,9 @@ header{
   display: none;
 }
 .btn-pokemon{
-  float: left;
   margin-top: 15px;
   padding: 2px;
-  width: 18%;
+  width: 100%;
 }
 #btn-menu{
   display: none;
@@ -111,8 +85,8 @@ header{
 .category-pokemon{
   display: inline-block;
   width: 90%;
-  padding: 10px 0;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin: 5px;
   background: linear-gradient(180deg, rgba(31, 192, 192, 0.78) 0%, #B7ECC0 100%), #C4C4C4;  ;
   border-radius: 5px;
   text-align: center;
@@ -122,10 +96,13 @@ header{
 .list-btn li{
 
   list-style: none;
+  display: inline-block;
+  align-items: center;
+
 }
 /* cajitas pokemon */
 .pokemon-box-card{
-  width: 82%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -136,13 +113,12 @@ header{
   margin: 10px;
 }
 .blog-card{
-  width: 100%;
   background: linear-gradient(111.6deg, #FFFFFF 2.76%, #B5FEA7 90.52%);
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  grid-template-columns: 2;
-  grid-template-rows: 1;
+  height: 280px;
+  width: 180px;
 }
 .post-title{
   border-bottom: solid 2px #23F1B4;
@@ -151,7 +127,7 @@ header{
   color: #1D8696;
 }
 .article-details{
-  background: #ffff;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 10px 20px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -164,7 +140,6 @@ header{
   padding: 70px 0 70px 0px;
 }
 #pag-inicio h4{
-  font-weight: 200px;
   border-bottom: 1px solid #fff;
   font-size: 2.4em;
   text-transform: uppercase;
@@ -173,7 +148,6 @@ header{
   padding: 30px 0 30px 30px;
 }
 #pag-inicio p{
-  font-weight: 200px;
   font-size: 1em;
   color: #fff;
   padding: 30px 0 30px 30px;
@@ -183,13 +157,10 @@ header{
   background: rgba(0, 46, 85, 0.5);
 
 }
-footer{
-  bottom: 0px;
-  background: #3EF111;
-  color: black;
+footer > div{
+  background: linear-gradient(to right, #639d25, #427768);;
   text-align: center;
   font-size: 12px;
-  width: 100%;
 }
 .row{
   position: relative;
@@ -228,7 +199,6 @@ PANTALLA DE ESCRITORIO GRANDE- LARGE (lg)
   #section4 article p img{
       width: 50%;
   }
-
 }
 /*========================================
 PANTALLA DE ESCRITORIO MEDIANO- LARGE (md)
@@ -251,7 +221,14 @@ PANTALLA DE ESCRITORIO MEDIANO- LARGE (md)
   #section4 article p img{
       width: 60%;
   }
-}
+    .img-header{
+      width: 10%;
+      margin: auto;
+    }
+    .img-header-center{
+      width: 35%;
+    }
+  }
 /*========================================
 PANTALLA DE ESCRITORIO SMALL (sm)
 ===========================================*/
@@ -274,13 +251,23 @@ PANTALLA DE ESCRITORIO SMALL (sm)
       width: 100%;
       margin-bottom: 20px;
   }
+  .img-header{
+    width: 20%;
+    margin: auto;
+  }
+  .img-header-center{
+    width: 45%;
+  }
+  .menu-horizontal{
+    font-size: 20px;
+    }
 }
 /*========================================
 PANTALLA DE ESCRITORIO PHONES (xs)
 ===========================================*/
 @media(max-width:767px){
   header{
-    height: 60px;
+    height: 40%;
   }
   .menu-horizontal{
     background: none;
@@ -307,10 +294,14 @@ PANTALLA DE ESCRITORIO PHONES (xs)
   #btn-menu:checked ~ .menu {
     margin: 0;
  }
-body{
-  background-size:auto 100%;
-}
-
+  .img-header{
+    width: 20%;
+    display: inline;
+    margin: auto;
+  }
+  .img-header-center{
+    width: 45%;
+  }
 
   .col-xs-12{width: 100%;}
   .col-xs-11{width: 91.66666667%}
@@ -328,5 +319,8 @@ body{
   #section4 article p img{
       width: 100%;
       margin-bottom: 20px;
+  }
+  #pag-inicio h4 {
+    font-size: 20px;
   }
 }

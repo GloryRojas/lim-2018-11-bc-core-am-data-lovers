@@ -1,30 +1,29 @@
 require('../src/data.js');
 
 const input = [
-  {'num': '001', 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 69},
-  {'num': '002', 'name': 'Ivysaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 4.2},
-  {'num': '003', 'name': 'Venusaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 1.7},
-  {'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3}
+  { 'num': '001', 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 69, 'candy_count': 50 },
+  { 'num': '002', 'name': 'Ivysaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 4.2, 'candy_count': 50 },
+  { 'num': '003', 'name': 'Venusaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 1.7 },
+  { 'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3 }
 ];
 const output = [
-  {'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3}
+  { 'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3 }
 ];
 
 const output1 = [
-  {'num': '001', 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 69},
-  {'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3},
-  {'num': '002', 'name': 'Ivysaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 4.2},
-  {'num': '003', 'name': 'Venusaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 1.7},
+  { 'num': '001', 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 69, 'candy_count': 50 },
+  { 'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3 },
+  { 'num': '002', 'name': 'Ivysaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 4.2, 'candy_count': 50 },
+  { 'num': '003', 'name': 'Venusaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 1.7 }
 ];
 
 const output2 = [
-  {'num': '001', 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 69},
+  { 'num': '001', 'name': 'Bulbasaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 69, 'candy_count': 50 }
 ];
 
 const output3 = [
-  {'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3}
+  { 'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3 }
 ];
-
 const output4 = `
       <div class='card-link'>
         <article class='blog-card'>
@@ -37,6 +36,10 @@ const output4 = `
         </article>
       </div>
     `;
+const output5 = [
+  { 'num': '004', 'name': 'Charmander', 'type': ['Fire'], 'avg_spawns': 25.3 },
+  { 'num': '003', 'name': 'Venusaur', 'type': ['Grass', 'Poison'], 'avg_spawns': 1.7 }
+];
 
 describe('pokeLover', () => {
   it('Debería ser un objeto', () => {
@@ -80,6 +83,14 @@ describe('pokeLover', () => {
     });
     it('debería retornar un string', () => {
       expect(pokeLover.crearTemplateDeCard(output)).toEqual(output4);
+    });
+  });
+  describe('pokeLover.evolution', () => {
+    it('Debería ser una funcion', () => {
+      expect(typeof pokeLover.filterEvolution).toBe('function');
+    });
+    it('debería retornar un array de objetos que no tengan la propiedad candy-count', () => {
+      expect(pokeLover.filterEvolution(input)).toEqual(output5);
     });
   });
 });

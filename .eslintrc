@@ -37,6 +37,6 @@
   "extends": "eslint:recommended",
   "globals": {
     "pokeLover": false,
-    "POKEMON": false,
+    "POKEMON": false
   }
 }
