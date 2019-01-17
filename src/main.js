@@ -1,73 +1,80 @@
+fetch('https://gloryrojas.github.io/lim-2018-11-bc-core-am-data-lovers/src/data/pokemon/pokemon.json')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    let pokemon = data.pokemon;
+    allFunction(pokemon);
+  });
 
-//  const ulContainer = document.getElementById('container-list');
-//  ulContainer.innerHTML = templateList;
-//  Mostrando todos los pokemones.
-const arrpokemon = POKEMON.pokemon;
-const dataPokemon = pokeLover.datacopy(arrpokemon);
-const containerList = document.getElementById('container-list');
-containerList.innerHTML = pokeLover.crearTemplateDeCard(dataPokemon);
+// Mostrando todos los pokemones.
+function allFunction(arrpokemon) {
+  const dataPokemon = pokeLover.datacopy(arrpokemon);
+  const containerList = document.getElementById('container-list');
+  containerList.innerHTML = pokeLover.crearTemplateDeCard(dataPokemon);
 
-const pagInicio = document.getElementById('pag-inicio');
-const pagFiltrar = document.getElementById('pag-filtrar');
-const pagOrdenar = document.getElementById('pag-ordenar');
-const pagPokecientifico = document.getElementById('pag-pokecientifico');
+  const pagInicio = document.getElementById('pag-inicio');
+  const pagFiltrar = document.getElementById('pag-filtrar');
+  const pagOrdenar = document.getElementById('pag-ordenar');
+  const pagPokecientifico = document.getElementById('pag-pokecientifico');
 
-const butonInicio = document.getElementById('btn-inicio');
-const butonFiltrar = document.getElementById('btn-filtrar');
-const butonOrdenar = document.getElementById('btn-ordenar');
-const butonPokecientifico = document.getElementById('btn-pokecientifico');
+  const butonInicio = document.getElementById('btn-inicio');
+  const butonFiltrar = document.getElementById('btn-filtrar');
+  const butonOrdenar = document.getElementById('btn-ordenar');
+  const butonPokecientifico = document.getElementById('btn-pokecientifico');
 
-butonInicio.addEventListener('click', () => {
-  pagInicio.style.display = 'block';
-  pagFiltrar.style.display = 'none';
-  pagOrdenar.style.display = 'none';
-  pagPokecientifico.style.display = 'none';
-});
-butonFiltrar.addEventListener('click', () => {
-  pagInicio.style.display = 'none';
-  pagFiltrar.style.display = 'block';
-  pagOrdenar.style.display = 'none';
-  pagPokecientifico.style.display = 'none';
-});
-butonOrdenar.addEventListener('click', () => {
-  pagInicio.style.display = 'none';
-  pagFiltrar.style.display = 'none';
-  pagOrdenar.style.display = 'block';
-  pagPokecientifico.style.display = 'none';
-});
-butonPokecientifico.addEventListener('click', () => {
-  pagInicio.style.display = 'none';
-  pagFiltrar.style.display = 'none';
-  pagOrdenar.style.display = 'none';
-  pagPokecientifico.style.display = 'block';
-});
-// Funcion FILTRAR
-const containerTypes = document.getElementById('cont-tipos');
-containerTypes.addEventListener('click', (event) => {
-  containerList.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterData(dataPokemon, event.target.getAttribute('value')));
-});
+  butonInicio.addEventListener('click', () => {
+    pagInicio.style.display = 'block';
+    pagFiltrar.style.display = 'none';
+    pagOrdenar.style.display = 'none';
+    pagPokecientifico.style.display = 'none';
+  });
+  butonFiltrar.addEventListener('click', () => {
+    pagInicio.style.display = 'none';
+    pagFiltrar.style.display = 'block';
+    pagOrdenar.style.display = 'none';
+    pagPokecientifico.style.display = 'none';
+  });
+  butonOrdenar.addEventListener('click', () => {
+    pagInicio.style.display = 'none';
+    pagFiltrar.style.display = 'none';
+    pagOrdenar.style.display = 'block';
+    pagPokecientifico.style.display = 'none';
+  });
+  butonPokecientifico.addEventListener('click', () => {
+    pagInicio.style.display = 'none';
+    pagFiltrar.style.display = 'none';
+    pagOrdenar.style.display = 'none';
+    pagPokecientifico.style.display = 'block';
+  });
+  // Funcion FILTRAR
+  const containerTypes = document.getElementById('cont-tipos');
+  containerTypes.addEventListener('click', (event) => {
+    containerList.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterData(dataPokemon, event.target.getAttribute('value')));
+  });
 
 
-// Funcion ORDENAR
-const containerOrdenar = document.getElementById('container-ordenar');
-const btnAscen = document.getElementById('btn-ascen');
-const btnDescen = document.getElementById('btn-descen');
+  // Funcion ORDENAR
+  const containerOrdenar = document.getElementById('container-ordenar');
+  const btnAscen = document.getElementById('btn-ascen');
+  const btnDescen = document.getElementById('btn-descen');
 
-btnAscen.addEventListener('click', () => {
-  containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 0));
-});
-btnDescen.addEventListener('click', () => {
-  containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 'DESCENDENTE'));
-});
+  btnAscen.addEventListener('click', () => {
+    containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 0));
+  });
+  btnDescen.addEventListener('click', () => {
+    containerOrdenar.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.sortData(dataPokemon, 'name', 'DESCENDENTE'));
+  });
 
-// Funcion estadistica
-const containerPokecientifico = document.getElementById('container-pokecientifico');
-const btnProb = document.getElementById('btn-prob');
-btnProb.addEventListener('click', () => {
-  containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.computeStats(dataPokemon));
-});
+  // Funcion estadistica
+  const containerPokecientifico = document.getElementById('container-pokecientifico');
+  const btnProb = document.getElementById('btn-prob');
+  btnProb.addEventListener('click', () => {
+    containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.computeStats(dataPokemon));
+  });
 
-const btnEvol = document.getElementById('btn-evol');
-btnEvol.addEventListener('click', () => {
-  containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterEvolution(dataPokemon));
-});
+  const btnEvol = document.getElementById('btn-evol');
+  btnEvol.addEventListener('click', () => {
+    containerPokecientifico.innerHTML = pokeLover.crearTemplateDeCard(pokeLover.filterEvolution(dataPokemon));
+  });
+}

@@ -84,7 +84,7 @@ header{
 }
 .category-pokemon{
   display: inline-block;
-  width: 90%;
+  width: 100%;
   padding: 10px;
   margin: 5px;
   background: linear-gradient(180deg, rgba(31, 192, 192, 0.78) 0%, #B7ECC0 100%), #C4C4C4;  ;
